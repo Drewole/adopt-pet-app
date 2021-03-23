@@ -1,19 +1,19 @@
 /*
-App Name: If  you come up with something put it here.
+App Name: (yucky) Pet Adoption App  (If  you come up with something put it here).
 
 Developers: Drew, Saranya, Tam and Anthony
 
-Tam feels most comfortable with:
-	API stuff and UI
+Tam:
+	API stuff and Data 
 
-Anthony feels most comfortable with:
-	HTML/CSS
+Anthony:
+	HTML/CSS/UI/DESIGN
 
-Saranya feels most comfortable with:
-	HTML/CSS  I am still confusing in API concepts
+Saranya:
+	HTML/CSS/UI/DESIGN
 
-Drew feels most comfortable with:
-	Floater, JS and view logic outside of the api call and page/data building
+Drew:
+	Floater, JS and view logic outside of the api call and page/data view building
 
 Project scope: Building an app that helps people leisurely browse adorable, adoptable pets and add them to a favorites list that can be referenced later.
 
@@ -41,8 +41,12 @@ Backlog:
 
 New Technology: What new technology will we use? (this is part of the Acceptance Criteria)
 	Google Fonts - Saranya
-	Material Icons (part of google fonts)
-	Auto-complete library of some sort - drew
+
+	Material Icons (part of google fonts) - anthony
+	Auto-complete library of some sort - drew]
+
+	Wish List
+	Chat
 	Maybe animation library - drew
 
 API’s: (list of API sources we will be using)
@@ -51,8 +55,10 @@ Positionstack geocode API - Turns Address into latitude and longitude, which we 
 
 
 Libraries:
-Materialize CSS
+Materialize CSS or Bootstrap
+Material Icons
 JQuery
+More but uknown as of now.
 
 
 
