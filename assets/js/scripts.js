@@ -72,3 +72,8 @@ More but uknown as of now.
 
 
 */
+
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems);
+});

@@ -1,0 +1,33 @@
+nav{
+background-color: burlywood;
+}
+nav ul a{
+    font-weight: bold;
+}
+nav i.material-icons{
+    font-size: 50px;
+    padding-left: 10px;
+}
+.banner {
+    display: flex;
+    align-items: center;
+}
+.image-galary {
+    height: 300px;
+}
+.bannerText{
+    font-size: 60px;
+}
+.category .input-field {
+    padding-top: 50px;
+    display: inline-block;
+    width:20%
+}
+
+.category label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px;
+    color: #000;
+    margin-right: 32px;
+}
