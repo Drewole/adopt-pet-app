@@ -1,5 +1,6 @@
 nav{
 background-color: burlywood;
+margin-bottom: 30px;
 }
 nav ul a{
     font-weight: bold;
@@ -31,3 +32,17 @@ nav i.material-icons{
     color: #000;
     margin-right: 32px;
 }
+.tile-image img{
+width: 200px;
+height: 200px;
+}
+
+.pet-detail label{
+    margin-bottom: 20px;
+    display: inline-block;
+}
+.page-footer {
+    padding-top: 20px;
+    color: #fff;
+    background-color: burlywood;
+} 
