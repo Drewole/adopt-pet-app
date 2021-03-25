@@ -7,8 +7,62 @@
     <title>API pet</title>
   </head>
   <body>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script type="text/javascript" src="petfinder.js"></script>
+    <fieldset class="group">
+      <legend>Select the search parameter</legend>
+      
+      // can be : Id, type, breed, size, gender, location, distance, before, after, sort, page, limit <br>
+      // age, color, coat, status, name, organization, good_with_children, state, country <br>
+      // good_with_dogs, good_with_cats, house_trained, declawed, special_needs	
+      <ul class="checkbox">
+        <li>
+          <input type="checkbox" id="cb1" value="id" />
+          <label for="cb1">id</label>
+        </li>
+        <li>
+          <input type="checkbox" id="cb2" value="type" />
+          <label for="cb2">type</label>
+        </li>
+        <li>
+          <input type="checkbox" id="cb3" value="breed" />
+          <label for="cb3">breed</label>
+        </li>
+        <li>
+          <input type="checkbox" id="cb4" value="size" />
+          <label for="cb4">size</label>
+        </li>
+        <li>
+          <input type="checkbox" id="cb5" value="gender" />
+          <label for="cb5">gender</label>
+        </li>
+        <li>
+          <input type="checkbox" id="cb6" value="location" />
+          <label for="cb6">location</label>
+        </li>
+        <li>
+          <input type="checkbox" id="cb7" value="good_with_children" />
+          <label for="cb6">good_with_children</label>
+        </li>
+        <li>
+          <input type="checkbox" id="cb8" value="coat" />
+          <label for="cb6">coat</label>
+        </li>
+        <li>
+          <input type="checkbox" id="cb9" value="color" />
+          <label for="cb6">color</label>
+        </li>
+        <li>
+          <input type="checkbox" id="cb10" value="house_trained" />
+          <label for="cb6">house_trained</label>
+        </li>
+        <li>
+          <input type="checkbox" id="cb11" value="special_needs" />
+          <label for="cb6">special_needs</label>
+        </li>
+      </ul>
+    </fieldset>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+ <!--    <script type="text/javascript" src="petfinder.js"></script> -->
+    <script type="text/javascript" src="./assets/js/APIs-tam.js"></script>
   </body>
   </html>
