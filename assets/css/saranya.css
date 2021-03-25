@@ -32,6 +32,9 @@ nav i.material-icons{
     color: #000;
     margin-right: 32px;
 }
+.tile-image{
+margin-bottom: 70px;
+}
 .tile-image img{
 width: 200px;
 height: 200px;
@@ -42,7 +45,20 @@ height: 200px;
     display: inline-block;
 }
 .page-footer {
-    padding-top: 20px;
+    padding: 0px 10px;
     color: #fff;
     background-color: burlywood;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 } 
+.page-footer .footer-copyright{
+    background-color: burlywood;
+}
+
+.page-footer .footer-copyright a{
+    margin-left: 15px;
+}
+#termConditions{
+    text-align: center  ;
+}
