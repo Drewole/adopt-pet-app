@@ -1,9 +1,9 @@
 
 //These are the window elements of the switching
 const containerEl = $(".container");
-const welcomeEl = $(".welcome");
-const imagesEl = $(".images");
-const infoEl = $(".info");
+const welcomeViewEl = $(".welcome");//The ones below here might have to be changed
+const imagesViewEl = $(".images");
+const infoViewEl = $(".info");
 
 
 
@@ -13,33 +13,32 @@ function initialSetup() {
 		//Hides the scores view, hides the questions view, shows intro
 		introView();
 	}
-	changeHighScoreBtnText("High Scores");
 
 }
-
+/// This is the meat and potatoes
 function viewToggle(welcomeView, imagesView, infoView) {
 	if (welcomeView === "visible") {
-		welcomeEl.classList.remove("hidden");
-		welcomeEl.classList.add("visible");
+		welcomeViewEl.classList.add("visible");
+		welcomeViewEl.classList.remove("hidden");
 	} else {
-		welcomeEl.classList.remove("visible");
-		welcomeEl.classList.add("hidden");
+		welcomeViewEl.classList.remove("visible");
+		welcomeViewEl.classList.add("hidden");
 	};
 
 	if (imagesView === "visible") {
-		imagesEl.classList.remove("hidden");
-		imagesEl.classList.add("visible");
+		imagesViewEl.classList.remove("hidden");
+		imagesViewEl.classList.add("visible");
 	} else {
-		imagesEl.classList.remove("visible");
-		imagesEl.classList.add("hidden");
+		imagesViewEl.classList.remove("visible");
+		imagesViewEl.classList.add("hidden");
 	};
 
 	if (infoView === "visible") {
-		infoEl.classList.remove("hidden");
-		infoEl.classList.add("visible");
+		infoViewEl.classList.remove("hidden");
+		infoViewEl.classList.add("visible");
 	} else {
-		infoEl.classList.remove("visible");
-		infoEl.classList.add("hidden");
+		infoViewEl.classList.remove("visible");
+		infoViewEl.classList.add("hidden");
 	};
 
 };
