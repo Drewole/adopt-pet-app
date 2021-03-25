@@ -1,13 +1,14 @@
 
-
+//These are the window elements of the switching
+const containerEl = $(".container");
+const welcomeEl = $(".welcome");
+const imagesEl = $(".images");
+const infoEl = $(".info");
 
 
 
 
 function initialSetup() {
-	score = 0;
-	countDownTimer.textContent = "-";
-
 	if (highScoresWindow.classList.contains("visible") || questionsWindow.classList.contains("visible")) {
 		//Hides the scores view, hides the questions view, shows intro
 		introView();
@@ -16,29 +17,29 @@ function initialSetup() {
 
 }
 
-function viewToggle(introView, questionsView, highScoreView) {
-	if (introView === "visible") {
-		introWindow.classList.remove("hidden");
-		introWindow.classList.add("visible");
+function viewToggle(welcomeView, imagesView, infoView) {
+	if (welcomeView === "visible") {
+		welcomeEl.classList.remove("hidden");
+		welcomeEl.classList.add("visible");
 	} else {
-		introWindow.classList.remove("visible");
-		introWindow.classList.add("hidden");
-	}
-
-	if (questionsView === "visible") {
-		questionsWindow.classList.remove("hidden");
-		questionsWindow.classList.add("visible");
-	} else {
-		questionsWindow.classList.remove("visible");
-		questionsWindow.classList.add("hidden");
+		welcomeEl.classList.remove("visible");
+		welcomeEl.classList.add("hidden");
 	};
 
-	if (highScoreView === "visible") {
-		highScoresWindow.classList.remove("hidden");
-		highScoresWindow.classList.add("visible");
+	if (imagesView === "visible") {
+		imagesEl.classList.remove("hidden");
+		imagesEl.classList.add("visible");
 	} else {
-		highScoresWindow.classList.remove("visible");
-		highScoresWindow.classList.add("hidden");
-	}
+		imagesEl.classList.remove("visible");
+		imagesEl.classList.add("hidden");
+	};
+
+	if (infoView === "visible") {
+		infoEl.classList.remove("hidden");
+		infoEl.classList.add("visible");
+	} else {
+		infoEl.classList.remove("visible");
+		infoEl.classList.add("hidden");
+	};
 
 };
