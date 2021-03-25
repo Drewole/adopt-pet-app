@@ -6,25 +6,30 @@
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <title>Pet Finder - Help you find a new pet.</title>
           <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
           <!-- <link rel="stylesheet" href="assets/css/reset.css" /> -->
           <link rel="stylesheet" href="assets/css/style.css" />
           <link rel="stylesheet" href="assets/css/saranya.css" />
      </head>
      <body>
           <header class="head">
-               
                <nav>
                     <div class="nav-wrapper">
-                      <a href="#" class="brand-logo"> <i class="large material-icons ">pets</i>Pet-Finder</a>
-                      <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li><a href="index-saranya.html">Home</a></li>
-                        <li><a href=".html">Favourites</a></li>
-                        <li><a href=".html">Contact Us</a></li>
-                      </ul>
+                         <a href="index-saranya.html" class="brand-logo"> <i class="large material-icons">pets</i>Pet-Finder</a>
+                         <ul id="nav-mobile" class="right hide-on-med-and-down">
+                              <li>
+                                   <a href="index-saranya.html">Home<i class="fa fa-home"></i></a>
+                              </li>
+                              <li>
+                                   <a href=".html">Favourites<i class="fa fa-heart"></i></a>
+                              </li>
+                              <li>
+                                   <a href="#contact">Contact Us<i class="fa fa-phone"></i></a>
+                              </li>
+                         </ul>
                     </div>
-                  </nav>
+               </nav>
           </header>
 
           <div class="category center-align">
@@ -36,31 +41,58 @@
                          <option value="">Cat</option>
                     </select>
                </div>
-               
-
           </div>
 
           <div class="category center-align">
                <label class="">Zipcode</label>
                <div class="input-field">
-                    <input type="text" name="zipcode" id="zipcode"/>
-               </div>  
+                    <input type="text" name="zipcode" id="zipcode" />
+               </div>
           </div>
 
           <div class="category center-align">
                <label class="">Radius</label>
                <div class="input-field">
                     <select>
-                         <option value="" disabled selected>Choose your Miles</option>
-                         <option value="">Miles</option>
-                         <option value="">Miles</option>
+                         <option value="" disabled selected>Choose your radius</option>
+                         <option value=""> 5 Miles</option>
+                         <option value="">10 Miles</option>
+                         <option value="">15 Miles</option>
+                         <option value="">20 Miles</option>
                     </select>
                </div>
+          </div>
+          <div class="row tile-image">
+               <div class="col s12 center-align">
+                    <img src="wedding.jpg" />
+                    <img src="rocks.jpg" />
+                    <img src="falls2.jpg" />
+                    <img src="paris.jpg" />
+                    <img src="nature.jpg" />
+                    <img src="wedding.jpg" />
+                    <img src="rocks.jpg" />
+                    <img src="falls2.jpg" />
+                    <img src="paris.jpg" />
+                    <img src="nature.jpg" />
+                    <img src="wedding.jpg" />
+                    <img src="rocks.jpg" />
+                    <img src="falls2.jpg" />
+                    <img src="paris.jpg" />
+                    <img src="nature.jpg" />
+               </div>
+          </div>
 
-
-
-          
-          
+          <footer class="page-footer">
+               <div class="footer-copyright">
+                    © 2014 Copyright Text
+                    <div>
+                         <a class="grey-text text-lighten-4" href="#!">Email Us : pet_finder@gmail.com</a>
+                         <a class="grey-text text-lighten-4"> Tweet Us on <i class="fab fa-twitter"></i></a>
+                         <a class="grey-text text-lighten-4"> Follow Us on <i class="fab fa-facebook"></i></a>
+                         <a class="grey-text text-lighten-4" id="contact"> Contact : 123-456-7890</a>
+                    </div>
+               </div>
+          </footer>
 
           <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
