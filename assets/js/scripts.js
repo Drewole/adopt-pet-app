@@ -107,10 +107,7 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-//Adopt a pet toast message
-// M.toast({html: 'Successfully adopted a friend..You will receive an Email soon'})
-
-//Function for Automatic slideshow
+// functions for slide show
 var slideIndex = 0;
 showSlides();
 

@@ -1,6 +1,7 @@
 nav{
     background-color: burlywood;
     margin-bottom: 30px;
+    font-family: 'Permanent Marker', cursive;
     }
     nav ul a{
         font-weight: bold;
@@ -26,6 +27,7 @@ nav{
     }
     
     .category label {
+      
         font-size: 16px;
         font-weight: bold;
         margin-right: 10px;
@@ -45,6 +47,7 @@ nav{
         display: inline-block;
     }
     .page-footer {
+        font-family: 'Permanent Marker', cursive;
         padding: 0px 10px;
         color: #fff;
         background-color: burlywood;
@@ -148,5 +151,11 @@ nav{
         text-align: center  ;
     }
     
-    
-    
+    a.brand-logo{
+    font-family: 'Permanent Marker', cursive;
+
+    }
+
+    a {font-family: 'Permanent Marker', cursive;}
+
+    label {font-family: 'Permanent Marker', cursive;}
