@@ -1,5 +1,7 @@
 
 //These are the window elements of the switching
+const headerEl = $("header");
+const footerEL = $("footer");
 const containerEl = $(".container");
 const welcomeViewEl = $(".welcome");//The ones below here might have to be changed
 const imagesViewEl = $(".images");
@@ -42,3 +44,11 @@ function viewToggle(welcomeView, imagesView, infoView) {
 	};
 
 };
+
+headerEl.on("click", function (e) {
+
+})
+
+footerEl.on("click", function (e) {
+
+})
