@@ -27,8 +27,6 @@ externalDocs:
   url: 'https://www.petfinder.com/developers/v2/docs/'
 */
 
-
-
 var form = new FormData();
 
 var token = "";
@@ -37,57 +35,121 @@ form.append('grant_type', 'client_credentials');
 form.append('client_id', 'uX6OHJkjYlNy9eLD9RKw6iJ5LB08IAWqgeGrkz7KMq56QX3QOU');
 form.append('client_secret', 'ofgHmo9uEQRltYORcc6MZ1frZdJXJzY7Y8hcrMXj');
 
+  
+// the option value setup
 
-//when ever u search for a pet, we general a new token
-fetch('https://api.petfinder.com/v2/oauth2/token', {
+btn = $('<button>')
+btn.text('search')
+
+
+//$(".checkboxId").prop('checked', false)
+
+group = $('.group')
+group.append(btn)
+
+
+// general the request link
+
+
+btn.on('click', function() {
+
+  fetch('https://api.petfinder.com/v2/oauth2/token', {
     method: 'POST',
     body: form,
-}).then(response => {
+  }).then(response => {
     return response.json()
-}).then(data => {
+  }).then(data => {
     token = data.access_token;
-    
-    //after getting token, we make the call request
     console.log(token)
-    // make request here
-    getData();
     
-}).catch(error => {
-    console.error(error);
-})
-
-
-// the option   
-var value = 'dog'        // can be : what ever fit with parameter, they also have other pet like rabbit, bird ...
-
-
-
-var parameter = 'type'   // can be : Id, type, breed, size, gender, location, distance, before, after, sort, page, limit
-                         // age, color, coat, status, name, organization, good_with_children, state, country
-                         // good_with_dogs, good_with_cats, house_trained, declawed, special_needs	
-var ACTION = '?'
-var CATEGORY = 'animals'
-
-var url = `https://api.petfinder.com/v2/${CATEGORY}${ACTION}${parameter}=${value}`  //can add more parameter, value by  &{parameter_2}={value_2}
-
-function getData() {
-
-    $.ajax({
-        url: "https://api.petfinder.com/v2/animals?type=dog&page=2",    // this url is just example the real one is line 45
+//generation url of the request
+    url = 'https://api.petfinder.com/v2/animals?'
+    urlfinal = ''
+    
+      $('select option').each(function() {
+        if($(this).is(':selected')) {
+          if (url = 'https://api.petfinder.com/v2/animals?') {
+            url = url + $(this).val().substring(1)
+          } else {
+            url = url + $(this).val()}
+        }
+        console.log(url)
+      })
+      
+      $('.checkbox').each(function() {
+        if($(this).is(':checked')) {
+          if (url = 'https://api.petfinder.com/v2/animals?') {
+            url = url + $(this).val().substring(1)
+          } else {
+            url = url + $(this).val()
+          }
+        } 
+        console.log(url)
+      })
+      
+      //after getting token, we make the call request
+      $.ajax({
+        url: url,
         dataType: 'json',
         headers: {
-            'Authorization': `Bearer ${token}`,
+          'Authorization': `Bearer ${token}`,
         },
         success: function (data) {
-            console.log(data)
-            return data
+        console.log(data)
+        return data
         // getting data, do like normal
-            
-        },
-        error: function (error) {
-            console.log(error)
-        }
+ 
+  
+      },
+      error: function (error) {
+          console.log(error)
+      }
     })
-} 
+    
+  }).catch(error => {
+    console.error(error);
+  })
+  
+});
 
 
+//Lets get the coords of the city the user searches
+$('#locationBtn').text("location")
+
+$('#locationBtn').on('click', function() {
+
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    $('#map').text("Geolocation is not supported by this browser.");
+  }
+});
+
+function showPosition(position) {
+  $('#map').text(`Latitude:${position.coords.latitude} Longitude:${position.coords.longitude}`);
+}
+
+
+
+
+
+
+  
+// in this way, they need to provide their city or location to get lat lon
+// we can simply run the searching by their city, don't need to find lat lon 
+
+/* let cityGeocodeUrl = `https://api.positionstack.com/v1/forward?access_key=cbfda538c5445110ea0ae5fb6a27ebb4&query=${yourCity}&limit=1`
+fetch(cityGeocodeUrl)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    let lat = data.data[0].latitude;
+    let lon = data.data[0].longitude;
+    console.log(lat, lon)
+    var mapAPIkey =''
+    var img_url = `https://maps.googleapis.com/maps/api/staticmap?center=${lat},${lon}&zoom=14&size=400x300&sensor=false&key=${mapAPIkey}`
+  $("#mapholder").innerHTML = `<img src='${img_url}'>`;
+  },
+);
+ */
