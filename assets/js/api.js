@@ -39,7 +39,7 @@ form.append('client_secret', 'ofgHmo9uEQRltYORcc6MZ1frZdJXJzY7Y8hcrMXj');
 // the option value setup
 
 let btn = $('<button>')
-btn.text('search')
+btn.text('search').addClass('waves-effect waves-light btn-large')
 
 
 //$(".checkboxId").prop('checked', false)
