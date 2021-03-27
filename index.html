@@ -21,7 +21,8 @@
           <header class="head">
                <nav>
                     <div class="nav-wrapper">
-                         <a class="brand-logo welcome-link"> <i class="large material-icons">pets</i>Friend-Finder</a>
+                         <a class="brand-logo welcome-link left"> <i class="large material-icons">pets</i>Friend-Finder</a>
+                         
                          <ul id="nav-mobile" class="right hide-on-med-and-down">
                               <li>
                                    <a class="welcome-link">Home <i class="fa fa-home welcome-link"></i></a>
@@ -33,54 +34,66 @@
                                    <a class="favorites-link">Favourites <i class="fa fa-heart favorites-link"></i></a>
                               </li>
                          </ul>
+                         <ul id="slide-out" class="sidenav">
+                              
+                              <li>
+                                   <a class="welcome-link">Home <i class="fa fa-home welcome-link"></i></a>
+                              </li>
+                              <li>
+                                   <a class="find-friend-link">Find Friend <i class="fa fa-search find-friend-link"></i></a>
+                              </li>
+                              <li>
+                                   <a class="favorites-link">Favourites <i class="fa fa-heart favorites-link"></i></a>
+                              </li>
+                         </ul>
+                         <a href="#" data-target="slide-out" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
                     </div>
                </nav>
           </header>
-          <div class="row welcome-view visible">
+          <div class="welcome-view visible">
                <div class="wrapper" id="contentWrapper">
-                    <div class="row banner">
-                         <div class="col s8 image-galary">
+                    <div class="banner">
+                         <div class="image-galary">
                               <div class="slideshow-container">
                                    <!-- Automatic slide show images -->
                                    <div class="mySlides fade">
-                                        <img
-                                             src="data:image/jpeg;base64,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"
-                                             width="100%"
-                                        />
+                                        <img src="./assets/images/pet1.jpg" width="100%" />
                                    </div>
-
                                    <div class="mySlides fade">
-                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm_04g7L9r9KuwD1SWXeQ08SURXlUmghQQ_Q&usqp=CAU" width="100%" />
+                                        <img src="./assets/images/pet2.jpg" width="100%" />
                                    </div>
-
                                    <div class="mySlides fade">
-                                        <img
-                                             src="data:image/jpeg;base64,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"
-                                             width="100%"
-                                        />
+                                        <img src="./assets/images/pet3.jpg" width="100%" />
+                                   </div>
+                                   <div class="mySlides fade">
+                                        <img src="./assets/images/pet4.jpg" width="100%" />
                                    </div>
                               </div>
                          </div>
-                         <div class="col s4">
-                              <span class="bannerText">Adopt the Pet</span>
+                         <div class="right">
+                              <div class='bannerText'>Adopt the Pet</div>
+                              <div>
+                                   <a class="find-friend-link waves-effect waves-light btn-large">
+                                        Browse Pets 
+                                        <i class="fas fa-paw find-friend-link"></i>
+                                   </a>
+                              </div>
                          </div>
                     </div>
                </div>
-               <div class="center-align">
-                    <a class="find-friend-link waves-effect waves-light btn-large">Browse Pets <i class="fas fa-paw find-friend-link"></i></a>
-               </div>
+               
           </div>
           <!-- ￼End of the welcome view div -->
 
           <div class="row find-friend-view hidden">
-               <div class="category center-align">
+               <!-- <div class="category center-align">
                     <label class="">Zipcode</label>
                     <div class="input-field">
                          <input type="text" name="zipcode" id="zipcode" />
                     </div>
-               </div>
+               </div> -->
 
-               <div class="category center-align">
+               <!-- <div class="category center-align">
                     <label class="">Radius</label>
                     <div class="input-field">
                          <select>
@@ -91,89 +104,94 @@
                               <option value="">20 Miles</option>
                          </select>
                     </div>
-                    <fieldset class="group">
+               </div> -->
+                    <fieldset class="group category">
                          <legend>Select the search parameter</legend>
                          
-                         // can be : Id, type, breed, size, gender, location, distance, before, after, sort, page, limit <br>
+                         <!-- // can be : Id, type, breed, size, gender, location, distance, before, after, sort, page, limit <br>
                          // age, color, coat, status, name, organization, good_with_children, state, country <br>
-                         // good_with_dogs, good_with_cats, house_trained, declawed, special_needs	
-                         <ul class="checkbox" style='list-style-type:none'>
-                         <li>
-                              <form action="/action_page.php">
-                              <label for="">Choose a pet:</label>
-                              <select name="" id="pet">
-                              <option value="">any</option>
-                              <option value="&type=dog">dog</option>
-                              <option value="&ype=cat">cat</option>
-                              <option value="&type=bird">bird</option>
-                              <option value="&type=fish">fish</option>
-                              </select>
-                              </form>
-                         </li>
-                         <li>
-                              <form action="/action_page.php">
-                              <label for="">How far you go:</label>
-                              <select name="" id="distance">
-                              <option value="">any</option>
-                              <option value="&distance=10">10 miles</option>
-                              <option value="&distance=50">50 miles</option>
-                              <option value="&distance=75">75 miles</option>
-                              <option value="&distance=100">100 miles</option>
-                              </select>
-                         </li>
-                         <li>
-                              <form action="/action_page.php">
-                              <label for="">Breed, Idk any of it</label>
-                              <select name="" id="breed">
-                              <option value="">any</option>
-                              <option value="">Breed1</option>
-                              <option value="">Breed2</option>
-                              <option value="">Breed3</option>
-                              <option value="">Breed4</option>
-                              </select>
-                              </form>
-                         </li>
-                         <li>
-                              <form action="/action_page.php">
-                              <label for="">gender</label>
-                              <select name="" id="gender">
-                              <option value="">any</option>
-                              <option value="&gender=male">gut boi</option>
-                              <option value="&gender=female">gut girl</option>
-                              <option value="">has been castrated</option>
-                              </select>
-                              </form>
-                         </li>
-                         <li>
-                              <form action="/action_page.php">
-                              <label for="">pet size</label>
-                              <select name="" id="size">
-                              <option value="">any</option>
-                              <option value="&size=small">little rat size (0-25 lbs)</option>
-                              <option value="&size=medium">big monkey size(26-60 lbs)</option>
-                              <option value="&size=large">baby kong size (61-100 lbs)</option>
-                              <option value="&size=xlarge">kong size (101 lbs or more)</option>
-                              </select>
-                              </form>
-                         </li>
-                         <li>
-                              <input type="checkbox" class='checkbox' id="cb1" value="&good_with_children=true" />
-                              <label for="cb6">good_with_children</label>
-                         </li>
-                         
-                         <li>
-                              <input type="checkbox" class='checkbox' id="cb2" value="&house_trained=true" />
-                              <label for="cb6">house_trained</label>
-                         </li>
-                         <li>
-                              <input type="checkbox" class='checkbox' id="cb3" value="&special_needs=true" />
-                              <label for="cb6">special_needs</label>
-                         </li>
+                         // good_with_dogs, good_with_cats, house_trained, declawed, special_needs	 -->
+                         <form>
+                         <ul class="find-pet row" style='list-style-type:none'>
+                              <li class="col s12 m4 l4">
+                                   <label for="">Choose a pet:</label>
+                                   <select name="" id="pet">
+                                        <option value="">any</option>
+                                        <option value="&type=dog">dog</option>
+                                        <option value="&ype=cat">cat</option>
+                                        <option value="&type=bird">bird</option>
+                                        <option value="&type=fish">fish</option>
+                                   </select>
+                              </li>
+                              <li class="col s12 m4 l4">
+                                   <label for="">How far you go:</label>
+                                   <select name="" id="distance">
+                                   <option value="">any</option>
+                                   <option value="&distance=10">10 miles</option>
+                                   <option value="&distance=50">50 miles</option>
+                                   <option value="&distance=75">75 miles</option>
+                                   <option value="&distance=100">100 miles</option>
+                                   </select>
+                              </li>
+                              <li class="col s12 m4 l4">
+                                   <label for="">Breed, Idk any of it</label>
+                                   <select name="" id="breed">
+                                   <option value="">any</option>
+                                   <option value="">Breed1</option>
+                                   <option value="">Breed2</option>
+                                   <option value="">Breed3</option>
+                                   <option value="">Breed4</option>
+                                   </select>
+                              </li>
+                              <li class="col s12 m4 l4">
+                                   <label for="">gender</label>
+                                   <select name="" id="gender">
+                                   <option value="">any</option>
+                                   <option value="&gender=male">gut boi</option>
+                                   <option value="&gender=female">gut girl</option>
+                                   <option value="">has been castrated</option>
+                                   </select>
+                              </li>
+                              <li class="col s12 m4 l4">
+                                   <label for="">pet size</label>
+                                   <select name="" id="size">
+                                   <option value="">any</option>
+                                   <option value="&size=small">little rat size (0-25 lbs)</option>
+                                   <option value="&size=medium">big monkey size(26-60 lbs)</option>
+                                   <option value="&size=large">baby kong size (61-100 lbs)</option>
+                                   <option value="&size=xlarge">kong size (101 lbs or more)</option>
+                                   </select>
+                              </li>
+                              <li class="col s12">
+                                   <p>
+                                        <label>
+                                             <input type="checkbox"  class='checkbox' id="cb1" value="&good_with_children=true" />
+                                             <span>Good with children</span>
+                                        </label>
+                                   </p>
+                              </li>
+                              
+                              <li class="col s12">
+                                   <p>
+                                        <label>
+                                             <input type="checkbox" class='checkbox' id="cb2" value="&house_trained=true" />
+                                             <span>House trained</span>
+                                        </label>
+                                   </p>
+                                   
+                              </li>
+                              <li class="col s12">
+                                   <p>
+                                        <label>
+                                             <input type="checkbox" class='checkbox' id="cb3" value="&special_needs=true" />
+                                             <span>Speical needs</span>
+                                        </label>
+                                   </p>
+                              </li>
                          </ul>
+                    </form>
                     </fieldset>
                </div>
-
-               
           </div>
           <!-- End of the find friends view div -->
           <div class="row favorites-view hidden">

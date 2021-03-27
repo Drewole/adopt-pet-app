@@ -14,18 +14,18 @@ nav{
         font-size: 50px;
         padding-left: 10px;
     }
-    .banner {
-        display: flex;
-        align-items: center;
-    }
     .image-galary {
         height: 300px;
     }
     .bannerText{
         font-size: 60px;
+        color:#000;
+        position: relative;
+        margin-right: 30px;
+        font-family: 'Permanent Marker', cursive;
     }
     .category .input-field {
-        padding-top: 50px;
+        padding-bottom: 50px;
         display: inline-block;
         width:20%
     }
@@ -56,13 +56,15 @@ nav{
         color: #fff;
         background-color: burlywood;
         font-family: 'permanent Marker', cursive;
+        position: fixed;
+    width: 100%;
+    bottom: 0;
     
     } 
     * {box-sizing:border-box}
     
     /* Slideshow container */
     .slideshow-container {
-      max-width: 500px;
       position: relative;
       margin: auto;
     }
@@ -157,7 +159,7 @@ nav{
     
     a.brand-logo{
     font-family: 'Permanent Marker', cursive;
-
+    }
 .category label {
      font-size: 16px;
      font-weight: bold;
@@ -177,21 +179,11 @@ nav{
      margin-bottom: 20px;
      display: inline-block;
 }
-.page-footer {
-     padding: 0px 10px;
-     color: #fff;
-     background-color: burlywood;
-}
 * {
      box-sizing: border-box;
 }
 
 /* Slideshow container */
-.slideshow-container {
-     max-width: 500px;
-     position: relative;
-     margin: auto;
-}
 
 /* Hide the images by default */
 .mySlides {
@@ -281,4 +273,7 @@ nav{
 }
 #termConditions {
      text-align: center;
+}
+.group {
+    margin: 0 20px 50px 20px;
 }
