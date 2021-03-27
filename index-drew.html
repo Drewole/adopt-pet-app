@@ -4,13 +4,12 @@
           <meta charset="UTF-8" />
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <title>Pet Finder - Help you find a new pet.</title>
+          <title>Find a Friend - Help you find a new pet.</title>
+          <link rel="stylesheet" href="assets/css/reset.css" />
           <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
-          <link rel="stylesheet" href="assets/css/reset.css" />
-          <link rel="stylesheet" href="assets/css/styles.css" />
+          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
           <link rel="stylesheet" href="assets/css/saranya.css" />
-          <link rel="stylesheet" href="assets/css/anthony.css" />
      </head>
      <body>
           <header class="head">
@@ -19,67 +18,37 @@
                          <a href="index-saranya.html" class="brand-logo"> <i class="large material-icons">pets</i>Pet-Finder</a>
                          <ul id="nav-mobile" class="right hide-on-med-and-down">
                               <li>
-                                   <a href="index-saranya.html">Home<i class="fa fa-home"></i></a>
+                                   <a class="welcome-link">Home <i class="fa fa-home welcome-link"></i></a>
                               </li>
                               <li>
-                                   <a href=".html">Favourites<i class="fa fa-heart"></i></a>
+                                   <a class="find-friend-link">Find Friend <i class="fa fa-search find-friend-link"></i></a>
                               </li>
                               <li>
-                                   <a href="#contact">Contact Us<i class="fa fa-phone"></i></a>
+                                   <a class="favorites-link">Favourites <i class="fa fa-heart favorites-link"></i></a>
                               </li>
                          </ul>
                     </div>
                </nav>
           </header>
-          <div class="row welcome">
-               <h1>Welcome to this page</h1>
-               <p>
-                    Cupcake ipsum dolor sit. Amet wafer marzipan bonbon. Sugar plum biscuit wafer lemon drops chupa chups donut biscuit. Apple pie tiramisu caramels bonbon. Pie bonbon tart ice cream chocolate bar. Muffin jelly beans cotton candy bonbon icing gummi bears macaroon. Sugar plum sesame snaps muffin carrot cake pastry chocolate cake
-                    gummi bears gummi bears apple pie. Bear claw sweet roll powder jelly jelly-o chupa chups brownie. Pudding pastry jelly-o.
-               </p>
 
-               <p>
-                    Sugar plum cheesecake chocolate cake wafer bear claw pudding gummi bears gingerbread tiramisu. Sugar plum sugar plum jelly cupcake biscuit dessert cake halvah. Chocolate bar powder chocolate bar. Cheesecake chupa chups pie pudding. Apple pie ice cream chocolate powder cookie. Biscuit lemon drops cotton candy biscuit cake
-                    biscuit. Lollipop dessert pudding. Bear claw jelly beans sweet roll dessert candy canes wafer topping. Fruitcake marzipan dessert biscuit jujubes chocolate. Gingerbread marshmallow pastry.
-               </p>
+          <!-- Beginning of welcome view -->
+          <div class="row welcome-view visible">
+               <h1>Welcome Page</h1>
+               <!-- All of the initial welcome page stuff is here. -->
           </div>
-          <div class="row images hidden">
-               <h1>Some Images</h1>
-               <div class="row tile-image">
-                    <div class="col s12 center-align">
-                         <img src="wedding.jpg" />
-                         <img src="rocks.jpg" />
-                         <img src="falls2.jpg" />
-                         <img src="paris.jpg" />
-                         <img src="nature.jpg" />
-                         <img src="wedding.jpg" />
-                         <img src="rocks.jpg" />
-                         <img src="falls2.jpg" />
-                         <img src="paris.jpg" />
-                         <img src="nature.jpg" />
-                         <img src="wedding.jpg" />
-                         <img src="rocks.jpg" />
-                         <img src="falls2.jpg" />
-                         <img src="paris.jpg" />
-                         <img src="nature.jpg" />
-                    </div>
-               </div>
+
+          <!-- Beginning of find a friend view -->
+          <div class="row find-friend-view hidden">
+               <h1>Find Friends View</h1>
+               <!-- ￼This should have the setting criteria, showing 2 images to select from, then the info box below -->
           </div>
-          <div class="row info hidden">
-               <h1>Here is some info:</h1>
-               <ul>
-                    <li>This is a list item</li>
-                    <li>This is a list item</li>
-                    <li>This is a list item</li>
-                    <li>This is a list item</li>
-               </ul>
-               <div class="row tile-image">
-                    <div class="col s12 center-align">
-                         <img src="wedding.jpg" />
-                         <img src="rocks.jpg" />
-                    </div>
-               </div>
+
+          <!-- Beginning of Favorites view -->
+          <div class="row favorites-view hidden">
+               <h1>Favorites View</h1>
+               <!-- ￼Favorites section. List of elements with means to recall information about that pet, submit to adopt, etc.  -->
           </div>
+
           <footer class="page-footer">
                <div class="footer-copyright">
                     © 2014 Copyright Text
