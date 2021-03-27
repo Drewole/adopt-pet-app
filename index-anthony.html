@@ -21,82 +21,84 @@
                            <a href="index-saranya.html" class="brand-logo"> <i class="large material-icons ">pets</i>Find a Friend</a>
                            <ul id="nav-mobile" class="right hide-on-med-and-down">
                               <li><a href="index-saranya.html">Home<i class="fa fa-home"></i></a></li>
-                              <li><a href=".html">Favourites<i class="fa fa-heart"></i></a></li>
+                              <li><a href="index-anthony.html">Favourites<i class="fa fa-heart"></i></a></li>
                                <li><a href="#contact">Contact Us<i class="fa fa-phone"></i></a></li>
                            </ul>
                          </div>
                     </nav>
           </header>
-          <div class="row pet-profile">
-               <div class="col s12 m5 l5 center-align">
-                    <img src=".jpg" width="300" height="300" />
-               </div>     
 
-               <div class="category pet-detail col s12 l7 m7">
-                    <div>
-                         <label>Pet Name :</label> <label id="petName"></label>
+          <!-- Wrapper class starts here -->
+          <div class="wrapper" id="contentWrapper">
+               <div class="row pet-profile">
+                    <div class="col s12 m5 l5 center-align">
+                         <img src=".jpg" width="300" height="300" />
+                    </div>     
+
+                    <div class="category pet-detail col s12 l7 m7">
+                         <div>
+                              <label>Pet Name :</label> <label id="petName"></label>
+                         </div>
+                         <div>
+                              <label>Breed :</label> <label id="breed"></label>
+                         </div>
+                         <div>
+                              <label>Age :</label> <label id="age"></label>
+                         </div>
+                         <div>
+                              <label>Gender :</label> <label id="gender"></label>
+                         </div>
+                         <div>
+                              <label>Adoption Fee :</label> <label id="cost"></label>
+                         </div>
+                         
                     </div>
-                    <div>
-                         <label>Breed :</label> <label id="breed"></label>
-                    </div>
-                    <div>
-                         <label>Age :</label> <label id="age"></label>
-                    </div>
-                    <div>
-                         <label>Gender :</label> <label id="gender"></label>
-                    </div>
-                    <div>
-                         <label>Adoption Fee :</label> <label id="cost"></label>
-                    </div>
-                    
-               </div>
                
+               </div>
+                    <label>
+                         <input type="checkbox" id="termConditions"/>
+                         <span>By submitting this form, I agree to receive marketing and other communications from Petfinder. 
+                              Read the Privacy Policy and About Our Ads. I understand that information I submit is going both 
+                              to Petfinder and to the shelter, and that Petfinder is not responsible for interactions with the shelter.</span>
+                    </label>
           
+          
+                    <!-- User information -->
+                    <div class="row">
+                         <form class="col s12">
+                         <!-- <div class="row"> -->
+                              <div class="input-field col l3 m6 s12">
+                                   <i class="material-icons prefix">account_circle</i>
+                                   <input id="firstName" type="text" class="validate">
+                                   <label for="firstName">First Name</label>
+                              </div>
+                              <div class="input-field col l3 m6 s12">
+                                   <i class="material-icons prefix">account_circle</i>
+                                   <input id="lastName" type="text" class="validate">
+                                   <label for="lastName">Last Name</label>
+                              </div>
+
+                              <div class="input-field col l3 m6 s12">
+                                   <i class="material-icons prefix">phone</i>
+                                   <input id="telephone" type="tel" class="validate">
+                                   <label for="telephone">Telephone</label>
+                              </div>
+                              <div class="input-field col l3 m6 s12">
+                                   <i class="material-icons prefix">email</i>
+                                   <input id="email" type="email" class="validate">
+                                   <label for="email">E Mail</label>
+                              </div>
+                         <!-- </div> -->
+                         </form>
+                    </div>
+
+                    <div class="center-align">
+                         <a href="index-saranya.html" class="waves-effect waves-light btn-large btn">
+                              Adopt A Pet <i class="fas fa-paw"></i> 
+                         </a>
+                    </div>
+
           </div>
-          <label>
-               <input type="checkbox" id="termConditions"/>
-               <span>By submitting this form, I agree to receive marketing and other communications from Petfinder. 
-                    Read the Privacy Policy and About Our Ads. I understand that information I submit is going both 
-                    to Petfinder and to the shelter, and that Petfinder is not responsible for interactions with the shelter.</span>
-             </label>
-         
-       
-               <!-- User information -->
-               <div class="row">
-                    <form class="col s12">
-                      <!-- <div class="row"> -->
-                         <div class="input-field col l3 m6 s12">
-                              <i class="material-icons prefix">account_circle</i>
-                              <input id="firstName" type="text" class="validate">
-                              <label for="firstName">First Name</label>
-                         </div>
-                         <div class="input-field col l3 m6 s12">
-                              <i class="material-icons prefix">account_circle</i>
-                              <input id="lastName" type="text" class="validate">
-                              <label for="lastName">Last Name</label>
-                         </div>
-
-                         <div class="input-field col l3 m6 s12">
-                              <i class="material-icons prefix">phone</i>
-                              <input id="telephone" type="tel" class="validate">
-                              <label for="telephone">Telephone</label>
-                         </div>
-                         <div class="input-field col l3 m6 s12">
-                              <i class="material-icons prefix">email</i>
-                              <input id="email" type="email" class="validate">
-                              <label for="email">E Mail</label>
-                         </div>
-                      <!-- </div> -->
-                    </form>
-               </div>
-
-               <div class="center-align">
-                    <button class="waves-effect waves-light btn-large" type="button">
-                         Adopt A Pet <i class="fas fa-paw"></i> 
-                    </button>
-               </div>
-
-
 
 
           <footer class="page-footer">
