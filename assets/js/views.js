@@ -1,8 +1,8 @@
 
 //These are the window elements of the switching
-const welcomeViewEl = document.querySelector(".welcome");
-const findFriendViewEl = document.querySelector(".find-friend");
-const favoritesViewEl = document.querySelector(".favorites")
+const welcomeViewEl = document.querySelector(".welcome-view");
+const findFriendViewEl = document.querySelector(".find-friend-view");
+const favoritesViewEl = document.querySelector(".favorites-view");
 
 
 
@@ -40,7 +40,7 @@ function viewToggle(welcomeView, findFriendView, favoritesView) {
 		favoritesViewEl.classList.add("hidden");
 	};
 
-// };
+};
 
 function welcomeView() {
 	console.log("Welcome View Showing.");
@@ -49,14 +49,14 @@ function welcomeView() {
 //Also call this when the game ends
 function findFriendView() {
 	console.log("Find Friend View Showing.");
-	//Shows the scores view, hides the questions view, hides intro
+	//Shows the find friend view, hides the favorites view, hides wlecome
 	viewToggle("hidden", "visible", "hidden");
 
 };
 function favoritesView() {
 	console.log("Favorites View Showing.");
 
-	//Hides the scores view, hides the questions view, shows intro
+	//Hides the welcome view, hides the find friend view, shows favorites
 	viewToggle("hidden", "hidden", "visible");
 
 };
@@ -70,14 +70,12 @@ clickContainer.addEventListener("click", function (event) {
 	console.log(elementClicked)
 	console.log($("a.home"))
 	if (elementClicked.classList.contains("welcome-link")) {
-		viewToggle("visible", "hidden", "hidden");
+		welcomeView()
 	} else if (elementClicked.classList.contains("find-friend-link")) {
-		viewToggle("hidden", "visible", "hidden");
+		findFriendView()
 	} else if (elementClicked.classList.contains("favorites-link")) {
-		viewToggle("hidden", "hidden", "visible");
+		favoritesView()
 	};
 
 
-	//Check if the answer selected is correct - Need to make this an event bubble and catch it on the parent
-
-});
+})
