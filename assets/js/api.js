@@ -97,10 +97,12 @@ btn.on('click', function () {
 			},
 			success: function (data) {
 
-				
+				function displayImagesToSelect() {
+					
+				}
 
 				let petSelection = data;
-				console.log(petSelection)
+				console.log(petSelection.animals[0])
 
 
 
