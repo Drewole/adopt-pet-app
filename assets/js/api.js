@@ -60,7 +60,7 @@ btn.on('click', function () {
 		return response.json()
 	}).then(data => {
 		token = data.access_token;
-		console.log(token)
+		// console.log(token)
 
 		//generation url of the request
 		url = 'https://api.petfinder.com/v2/animals?'
@@ -74,7 +74,7 @@ btn.on('click', function () {
 					url = url + $(this).val()
 				}
 			}
-			console.log(url)
+			// console.log(url)
 		})
 
 		$('.checkbox').each(function () {
@@ -85,7 +85,7 @@ btn.on('click', function () {
 					url = url + $(this).val()
 				}
 			}
-			console.log(url)
+			// console.log(url)
 		})
 
 		//after getting token, we make the call request
@@ -96,8 +96,13 @@ btn.on('click', function () {
 				'Authorization': `Bearer ${token}`,
 			},
 			success: function (data) {
-				console.log(data)
+
 				
+
+				let petSelection = data;
+				console.log(petSelection)
+
+
 
 
 			},

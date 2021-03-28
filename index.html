@@ -4,7 +4,7 @@
           <meta charset="UTF-8" />
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <title>Friend Finder - Helping you find a new pet.</title>
+          <title>Friend Finder - Helping you find your new pet.</title>
           <!-- <link rel="stylesheet" href="assets/css/reset.css" /> -->
           <link rel="preconnect" href="https://fonts.gstatic.com" />
 
@@ -106,7 +106,7 @@
                     </div>
                </div> -->
                     <fieldset class="group category">
-                         <legend>Select the search parameter</legend>
+                         <legend>What Kind Of Pet Are You Looking For?</legend>
                          
                          <!-- // can be : Id, type, breed, size, gender, location, distance, before, after, sort, page, limit <br>
                          // age, color, coat, status, name, organization, good_with_children, state, country <br>
@@ -170,20 +170,28 @@
                          </ul>
                     </form>
                     </fieldset>
-                    <div class="col s12 m5 l5 center-align">
-                         <img src=".jpg" width="300" height="300" />
-                    </div>     
+                    <div class="hidden images-wrapper container">
+                         <div class="col s6 m6 center-align">
+                              <img src=".jpg" width="300" height="300" />
+                         </div>     
+                         <div class="col s6 m6 center-align">
+                              <img src=".jpg" width="300" height="300" />
+                         </div>     
+                    </div>
 
-                    <div class="category pet-detail col s12 l7 m7">
+                    <div class="hidden category pet-detail container col s12 l7 m7">
+                         <div class="col s6 m6 center-align">
+                              <img src=".jpg" width="300" height="300" />
+                         </div>
                          <label>
                               <h3>Bobby the Cat</h3>
                          </label>
                          <ul>
-                              <li>Age: 10</li>
-                              <li>Somthing else</li>
-                              <li>Something else</li>
-                              <li>Boo</li>
-                              <li>I like u</li>
+                              <li><span class="bold">Age:</span> 10</li>
+                              <li><span class="bold">House Trained:</span> Yes</li>
+                              <li><span class="bold">Good With Children:</span> No</li>
+                              <li><span class="bold">Special Needs:</span> No</li>
+
                          </ul>
                          <button class=" waves-effect waves-light btn-large btn">Add to Favs <i class="fas fa-heart"></i> </button>
                     </div>
@@ -224,9 +232,7 @@
                     </div>
                     <div class="container">
                          <input type="checkbox" id="termConditions"/>
-                         <span>By submitting this form, I agree to receive marketing and other communications from Petfinder. 
-                              Read the Privacy Policy and About Our Ads. I understand that information I submit is going both 
-                              to Petfinder and to the shelter, and that Petfinder is not responsible for interactions with the shelter.</span>
+                         <span>By submitting this form, I agree to love this animal like my child. Also, it's ok to send me some info on how you can help other animals.</span>
                     </div>
                
                </div>
