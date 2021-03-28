@@ -98,23 +98,23 @@ btn.on('click', function () {
 			},
 			success: function (data) {
 				let petSelection = data;
-				let petOne = petSelection.animals[0].photos[0];
-				let petTwo = petSelection.animals[1].photos[0];
-
-				if (petSelection.animals[0].photos[0].medium === "") {
-					petOne = "https://via.placeholder.com/300";
+				let petOne
+				let petTwo
+				if(petSelection.animals[0].photos.length) {
+					 petOne = petSelection.animals[0].photos[0].medium;
+					 petTwo = petSelection.animals[1].photos[0].medium;
 				}
-				if (petSelection.animals[1].photos[0].medium === "") {
+				else {
+					petOne = "https://via.placeholder.com/300";
 					petTwo = "https://via.placeholder.com/300";
 				}
-				
 				
 				// TODO: I am having problems when there isn't a medium image and it returns undefined. The logic above this comment is trying to figure that out.
 				console.log(petSelection)
 				let choicesTemplate = 
-					`	<div class="selection-image first-image col s6 m6 center-align">
+					`	<div class="selection-image first-image col s6 m6 center-align" id="${petSelection.animals[0].id}" >
 								<h4>${petSelection.animals[0].name}</h4>
-								<img id="${petSelection.animals[0].id}" src="${petOne}" width="300" height="300" />
+								<img src="${petOne}" width="300" height="300" />
 							</div>
 							<div class="selection-image second-image col s6 m6 center-align">
 								<h4>${petSelection.animals[1].name}</h4>
