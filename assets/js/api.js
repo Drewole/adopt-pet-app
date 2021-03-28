@@ -42,8 +42,19 @@ form.append('client_secret', 'ofgHmo9uEQRltYORcc6MZ1frZdJXJzY7Y8hcrMXj');
 let btn = $('<button>')
 btn.text('search').addClass('waves-effect waves-light btn-large')
 
+var category
 
-//$(".checkboxId").prop('checked', false)
+document.addEventListener('DOMContentLoaded', function () {
+	var elems = document.querySelector('select');
+	elems.onchange = selectThem;
+	var instances = M.FormSelect.init(elems);
+	function selectThem(e) {
+		category = e.target.value
+	}
+});
+
+
+
 
 let group = $('.group')
 group.append(btn)
@@ -62,32 +73,34 @@ btn.on('click', function () {
 	}).then(data => {
 		token = data.access_token;
 		// console.log(token)
-
 		//generation url of the request
-		url = 'https://api.petfinder.com/v2/animals?'
-		urlfinal = ''
+		if(category !== undefined) {
+			url = 'https://api.petfinder.com/v2/animals?'+ category
+		} else {
+			url = 'https://api.petfinder.com/v2/animals?'
+		}
 
-		$('select option').each(function () {
-			if ($(this).is(':selected')) {
-				if (url = 'https://api.petfinder.com/v2/animals?') {
-					url = url + $(this).val().substring(1)
-				} else {
-					url = url + $(this).val()
-				}
-			}
-			// console.log(url)
-		})
+		// $('select option').each(function () {
+		// 	if ($(this).is(':selected')) {
+		// 		if (url = 'https://api.petfinder.com/v2/animals?') {
+		// 			url = url + $(this).val().substring(1)
+		// 		} else {
+		// 			url = url + $(this).val()
+		// 		}
+		// 	}
+		// 	// console.log(url)
+		// })
 
-		$('.checkbox').each(function () {
-			if ($(this).is(':checked')) {
-				if (url = 'https://api.petfinder.com/v2/animals?') {
-					url = url + $(this).val().substring(1)
-				} else {
-					url = url + $(this).val()
-				}
-			}
-			// console.log(url)
-		})
+		// $('.checkbox').each(function () {
+		// 	if ($(this).is(':checked')) {
+		// 		if (url = 'https://api.petfinder.com/v2/animals?') {
+		// 			url = url + $(this).val().substring(1)
+		// 		} else {
+		// 			url = url + $(this).val()
+		// 		}
+		// 	}
+		// 	// console.log(url)
+		// })
 
 		//after getting token, we make the call request
 		$.ajax({
@@ -97,34 +110,38 @@ btn.on('click', function () {
 				'Authorization': `Bearer ${token}`,
 			},
 			success: function (data) {
-				let petSelection = data;
-				let petOne
-				let petTwo
-				if(petSelection.animals[0].photos.length) {
-					 petOne = petSelection.animals[0].photos[0].medium;
-					 petTwo = petSelection.animals[1].photos[0].medium;
-				}
-				else {
-					petOne = "https://via.placeholder.com/300";
-					petTwo = "https://via.placeholder.com/300";
-				}
+				var animals = data.animals;
 				
+
 				// TODO: I am having problems when there isn't a medium image and it returns undefined. The logic above this comment is trying to figure that out.
-				console.log(petSelection)
-				let choicesTemplate = 
-					`	<div class="selection-image first-image col s6 m6 center-align" id="${petSelection.animals[0].id}" >
-								<h4>${petSelection.animals[0].name}</h4>
-								<img src="${petOne}" width="300" height="300" />
+				// console.log(petSelection)
+				animals.forEach(animal => {
+					$(".images-wrapper").append(
+					`	<div class="selection-image first-image col s12 m6 l4 center-align" id="${animal.id}" >
+								<h4>${animal.name}</h4>
+								<img src="${animal.photos.length ? animal.photos[0].medium : 'https://via.placeholder.com/300'}" width="300" height="300" />
 							</div>
-							<div class="selection-image second-image col s6 m6 center-align">
-								<h4>${petSelection.animals[1].name}</h4>
-								<img id="${petSelection.animals[1].id}" src="${petTwo}" width="300" height="300" />
-							</div>
-						 `
-				$(".images-wrapper").append(choicesTemplate).removeClass("hidden");
-				$(".selection-image").on("click", function(e){
-					console.log($(this).attr("id"));
-					//TODO: need to then get the data of the clicked item by using the ID, and display that in the box that is below it in the HTML. Fields are there, just need to replace necessary text.
+						 `).removeClass('hidden')
+				});
+
+				$(".selection-image").on("click", function(	){
+					var petId = $(this).attr("id"); //123
+					$('.pet-detail').removeClass('hidden')
+					$('.find-friend-view').addClass('hidden')
+					var selectedAnimal = animals.find(function(animal){
+						return animal.id==petId
+					})
+					console.log(selectedAnimal)
+					var selectedAnimalImage = selectedAnimal.photos.length ? selectedAnimal.photos[0].medium : 'https://via.placeholder.com/300'
+					$("#petDetailImage").html("<img src="+selectedAnimalImage+" width='300' height='300' />")
+					$('#petName').html(selectedAnimal.name+' The '+selectedAnimal.species)
+					$('#gender').html(selectedAnimal.gender)
+					$('#age').html(selectedAnimal.age)
+					$('#breed').html(selectedAnimal.breeds.primary)
+					$('#goodWithChild').html(selectedAnimal.environment.children=== true ? 'Yes' : 'No')
+					$('#color').html(selectedAnimal.colors.primary)
+					$('#description').html(selectedAnimal.description)
+					
 				});
 
 
@@ -156,6 +173,7 @@ $('#locationBtn').on('click', function () {
 function showPosition(position) {
 	$('#map').text(`Latitude:${position.coords.latitude} Longitude:${position.coords.longitude}`);
 }
+
 
 
 
