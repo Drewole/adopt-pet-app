@@ -8,9 +8,9 @@ const favoritesViewEl = document.querySelector(".favorites-view");
 
 
 function initialSetup() {
-	if (imagesViewEl.classList.contains("visible") || infoViewEL.classList.contains("visible")) {
+	if (findFriendViewEl.classList.contains("visible") || favoritesViewEL.classList.contains("visible")) {
 		//Hides the scores view, hides the questions view, shows intro
-		viewToggle("visible","hidden","hidden");
+		 welcomeView();
 	}
 
 }
@@ -44,9 +44,10 @@ function viewToggle(welcomeView, findFriendView, favoritesView) {
 
 function welcomeView() {
 	console.log("Welcome View Showing.");
+	//Shows the welcome view, hides the favorites view, hides find friends
 	viewToggle("visible", "hidden", "hidden");
 };
-//Also call this when the game ends
+
 function findFriendView() {
 	console.log("Find Friend View Showing.");
 	//Shows the find friend view, hides the favorites view, hides wlecome

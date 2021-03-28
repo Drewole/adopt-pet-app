@@ -60,7 +60,7 @@ btn.on('click', function () {
 		return response.json()
 	}).then(data => {
 		token = data.access_token;
-		console.log(token)
+		// console.log(token)
 
 		//generation url of the request
 		url = 'https://api.petfinder.com/v2/animals?'
@@ -74,7 +74,7 @@ btn.on('click', function () {
 					url = url + $(this).val()
 				}
 			}
-			console.log(url)
+			// console.log(url)
 		})
 
 		$('.checkbox').each(function () {
@@ -85,7 +85,7 @@ btn.on('click', function () {
 					url = url + $(this).val()
 				}
 			}
-			console.log(url)
+			// console.log(url)
 		})
 
 		//after getting token, we make the call request
@@ -96,9 +96,15 @@ btn.on('click', function () {
 				'Authorization': `Bearer ${token}`,
 			},
 			success: function (data) {
-				console.log(data)
-				return data
-				// getting data, do like normal
+
+				function displayImagesToSelect() {
+					
+				}
+
+				let petSelection = data;
+				console.log(petSelection.animals[0])
+
+
 
 
 			},
@@ -115,7 +121,7 @@ btn.on('click', function () {
 
 
 //Lets get the coords of the city the user searches
-$('#locationBtn').text("location")
+$('#locationBtn').text("Get My Location")
 
 $('#locationBtn').on('click', function () {
 
