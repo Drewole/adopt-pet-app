@@ -119,7 +119,7 @@ btn.on('click', function () {
 
 
 //Lets get the coords of the city the user searches
-$('#locationBtn').text("location")
+$('#locationBtn').text("Get My Location")
 
 $('#locationBtn').on('click', function () {
 
