@@ -71,7 +71,7 @@
                               </div>
                          </div>
                          <div class="right">
-                              <div class='bannerText'>Adopt the Pet</div>
+                              <div class='bannerText'>Find Your Friend</div>
                               <div>
                                    <a class="find-friend-link waves-effect waves-light btn-large">
                                         Browse Pets 
@@ -114,19 +114,17 @@
                          <form>
                          <ul class="find-pet row" style='list-style-type:none'>
                               <li class="col s12 m4 l4">
-                                   <label for="">Choose a pet:</label>
-                                   <select name="" id="pet">
-                                        <option value="">any</option>
-                                        <option value="&type=dog">dog</option>
-                                        <option value="&ype=cat">cat</option>
-                                        <option value="&type=bird">bird</option>
-                                        <option value="&type=fish">fish</option>
+                                   <label for="pet">Choose a pet:</label>
+                                   <select name="pet" id="pet">
+                                        <option value="">Any</option>
+                                        <option value="&type=dog">Dog</option>
+                                        <option value="&ype=cat">Cat</option>
                                    </select>
                               </li>
                               <li class="col s12 m4 l4">
-                                   <label for="">How far you go:</label>
-                                   <select name="" id="distance">
-                                   <option value="">any</option>
+                                   <label for="distance">Search Radius</label>
+                                   <select name="distance" id="distance">
+                                   <option value="">Any</option>
                                    <option value="&distance=10">10 miles</option>
                                    <option value="&distance=50">50 miles</option>
                                    <option value="&distance=75">75 miles</option>
@@ -134,63 +132,61 @@
                                    </select>
                               </li>
                               <li class="col s12 m4 l4">
-                                   <label for="">Breed, Idk any of it</label>
-                                   <select name="" id="breed">
-                                   <option value="">any</option>
-                                   <option value="">Breed1</option>
-                                   <option value="">Breed2</option>
-                                   <option value="">Breed3</option>
-                                   <option value="">Breed4</option>
+                                   <label for="gender">Gender</label>
+                                   <select name="gender" id="gender">
+                                   <option value="">Any</option>
+                                   <option value="&gender=male">Gut Boi</option>
+                                   <option value="&gender=female">Gut Girl</option>
                                    </select>
                               </li>
                               <li class="col s12 m4 l4">
-                                   <label for="">gender</label>
-                                   <select name="" id="gender">
-                                   <option value="">any</option>
-                                   <option value="&gender=male">gut boi</option>
-                                   <option value="&gender=female">gut girl</option>
-                                   <option value="">has been castrated</option>
+                                   <label for="size">Pet Size</label>
+                                   <select name="size" id="size">
+                                   <option value="">Any</option>
+                                   <option value="&size=small">Little Rat (0-25 lbs)</option>
+                                   <option value="&size=medium">Big Monkey (26-60 lbs)</option>
+                                   <option value="&size=large">Small Horse (61-100 lbs)</option>
+                                   <option value="&size=xlarge">Baby Kong (101 lbs or more)</option>
                                    </select>
                               </li>
-                              <li class="col s12 m4 l4">
-                                   <label for="">pet size</label>
-                                   <select name="" id="size">
-                                   <option value="">any</option>
-                                   <option value="&size=small">little rat size (0-25 lbs)</option>
-                                   <option value="&size=medium">big monkey size(26-60 lbs)</option>
-                                   <option value="&size=large">baby kong size (61-100 lbs)</option>
-                                   <option value="&size=xlarge">kong size (101 lbs or more)</option>
-                                   </select>
+                              <li class="col s12 m4">
+                                   <label for="children">
+                                        <input name="children" type="checkbox"  class='checkbox' id="cb1" value="&good_with_children=true" />
+                                        <span>Good with children</span>
+                                   </label>
                               </li>
-                              <li class="col s12">
-                                   <p>
-                                        <label>
-                                             <input type="checkbox"  class='checkbox' id="cb1" value="&good_with_children=true" />
-                                             <span>Good with children</span>
-                                        </label>
-                                   </p>
+                              <li class="col s12 m4">
+                                   <label for="special">
+                                        <input name="special" type="checkbox" class='checkbox' id="cb3" value="&special_needs=true" />
+                                        <span>Special needs</span>
+                                   </label>
                               </li>
-                              
-                              <li class="col s12">
-                                   <p>
-                                        <label>
-                                             <input type="checkbox" class='checkbox' id="cb2" value="&house_trained=true" />
-                                             <span>House trained</span>
-                                        </label>
-                                   </p>
-                                   
-                              </li>
-                              <li class="col s12">
-                                   <p>
-                                        <label>
-                                             <input type="checkbox" class='checkbox' id="cb3" value="&special_needs=true" />
-                                             <span>Speical needs</span>
-                                        </label>
-                                   </p>
+                              <li class="col s12 m4">
+                                   <label for="house-trained">
+                                        <input name="house-trained" type="checkbox" class='checkbox' id="cb2" value="&house_trained=true" />
+                                        <span>House trained</span>
+                                   </label>
                               </li>
                          </ul>
                     </form>
                     </fieldset>
+                    <div class="col s12 m5 l5 center-align">
+                         <img src=".jpg" width="300" height="300" />
+                    </div>     
+
+                    <div class="category pet-detail col s12 l7 m7">
+                         <label>
+                              <h3>Bobby the Cat</h3>
+                         </label>
+                         <ul>
+                              <li>Age: 10</li>
+                              <li>Somthing else</li>
+                              <li>Something else</li>
+                              <li>Boo</li>
+                              <li>I like u</li>
+                         </ul>
+                         <button class=" waves-effect waves-light btn-large btn">Add to Favs <i class="fas fa-heart"></i> </button>
+                    </div>
                </div>
           </div>
           <!-- End of the find friends view div -->
@@ -198,58 +194,47 @@
                <div class="wrapper" id="contentWrapper">
                     <div class="row tile-image">
                     <div class="col s12 center-align">
-                         <img src="wedding.jpg" />
-                         <img src="rocks.jpg" />
-                         <img src="falls2.jpg" />
-                         <img src="paris.jpg" />
-                         <img src="nature.jpg" />
-                         <img src="wedding.jpg" />
-                         <img src="rocks.jpg" />
-                         <img src="falls2.jpg" />
-                         <img src="paris.jpg" />
-                         <img src="nature.jpg" />
-                         <img src="wedding.jpg" />
-                         <img src="rocks.jpg" />
-                         <img src="falls2.jpg" />
-                         <img src="paris.jpg" />
-                         <img src="nature.jpg" />
+                         
                     </div>
                </div>
-               <div class="row pet-profile">
+               <div class="container favorites-list row s12 m9 14">
+                    <ul class="collection">
+                              <li class="collection-item">Alvin <i class="small material-icons">child_friendly</i><i class="small material-icons">insert_picture</i><a href=""><i class="small material-icons">insert_link</i></a></li>
+                              <li class="collection-item">Alvin</li>
+                              <li class="collection-item">Alvin</li>
+
+                         </ul>
+               </div>
+               <div class="row pet-detail container">
                     <div class="col s12 m5 l5 center-align">
                          <img src=".jpg" width="300" height="300" />
                     </div>     
 
                     <div class="category pet-detail col s12 l7 m7">
-                         <div>
-                              <label>Pet Name :</label> <label id="petName"></label>
-                         </div>
-                         <div>
-                              <label>Breed :</label> <label id="breed"></label>
-                         </div>
-                         <div>
-                              <label>Age :</label> <label id="age"></label>
-                         </div>
-                         <div>
-                              <label>Gender :</label> <label id="gender"></label>
-                         </div>
-                         <div>
-                              <label>Adoption Fee :</label> <label id="cost"></label>
-                         </div>
-                         
+                         <label>
+                              <h3>Bobby the Cat</h3>
+                         </label>
+                         <ul>
+                              <li>Age: 10</li>
+                              <li>Somthing else</li>
+                              <li>Something else</li>
+                              <li>Boo</li>
+                              <li>I like u</li>
+                         </ul>
                     </div>
-               
-               </div>
-                    <label>
+                    <div class="container">
                          <input type="checkbox" id="termConditions"/>
                          <span>By submitting this form, I agree to receive marketing and other communications from Petfinder. 
                               Read the Privacy Policy and About Our Ads. I understand that information I submit is going both 
                               to Petfinder and to the shelter, and that Petfinder is not responsible for interactions with the shelter.</span>
-                    </label>
+                    </div>
+               
+               </div>
+                    
           
           
                     <!-- User information -->
-                    <div class="row">
+                    <div class="container">
                          <form class="col s12">
                          <!-- <div class="row"> -->
                               <div class="input-field col l3 m6 s12">
@@ -274,13 +259,10 @@
                                    <label for="email">E Mail</label>
                               </div>
                          <!-- </div> -->
+                              <div class="center-align">
+                                   <button class="find-friend-link waves-effect waves-light btn-large btn">Adopt Your Pet <i class="fas fa-paw"></i> </button>
+                              </div>
                          </form>
-                    </div>
-
-                    <div class="center-align">
-                         <a class="find-friend-view waves-effect waves-light btn-large btn">
-                              Adopt A Pet <i class="fas fa-paw"></i> 
-                         </a>
                     </div>
 
           </div>

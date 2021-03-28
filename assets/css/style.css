@@ -1,165 +1,173 @@
 .hidden {
-  display: none;
+     display: none;
 }
-label {font-family: 'Permanent Marker', cursive;}
-nav{
-    background-color: burlywood;
-    margin-bottom: 30px;
-    font-family: 'Permanent Marker', cursive;
-    }
-    nav ul a{
-        font-weight: bold;
-    }
-    nav i.material-icons{
-        font-size: 50px;
-        padding-left: 10px;
-    }
-    .image-galary {
-        height: 300px;
-    }
-    .bannerText{
-        font-size: 60px;
-        color:#000;
-        position: relative;
-        margin-right: 30px;
-        font-family: 'Permanent Marker', cursive;
-    }
-    .category .input-field {
-        padding-bottom: 50px;
-        display: inline-block;
-        width:20%
-    }
-    
-    .category label {
-      
-        font-size: 16px;
-        font-weight: bold;
-        margin-right: 10px;
-        color: #000;
-        margin-right: 32px;
-    }
-    .tile-image{
-    margin-bottom: 70px;
-    }
-    .tile-image img{
-    width: 200px;
-    height: 200px;
-    }
-    
-    .pet-detail label{
-        margin-bottom: 20px;
-        display: inline-block;
-    }
-    .page-footer {
-        font-family: 'Permanent Marker', cursive;
-        padding: 0px 10px;
-        color: #fff;
-        background-color: burlywood;
-        font-family: 'permanent Marker', cursive;
-        position: fixed;
-    width: 100%;
-    bottom: 0;
-    
-    } 
-    * {box-sizing:border-box}
-    
-    /* Slideshow container */
-    .slideshow-container {
-      position: relative;
-      margin: auto;
-    }
-    
-    /* Hide the images by default */
-    .mySlides {
-      display: none;
-    }
-    
-    /* Next & previous buttons */
-    .prev, .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      width: auto;
-      margin-top: -22px;
-      padding: 16px;
-      color: white;
-      font-weight: bold;
-      font-size: 18px;
-      transition: 0.6s ease;
-      border-radius: 0 3px 3px 0;
-      user-select: none;
-    }
-    
-    /* Position the "next button" to the right */
-    .next {
-      right: 0;
-      border-radius: 3px 0 0 3px;
-    }
-    
-    /* On hover, add a black background color with a little bit see-through */
-    .prev:hover, .next:hover {
-      background-color: rgba(0,0,0,0.8);
-    }
-    
-    /* Caption text */
-    .text {
-      color: #f2f2f2;
-      font-size: 15px;
-      padding: 8px 12px;
-      position: absolute;
-      bottom: 8px;
-      width: 100%;
-      text-align: center;
-    }
-    
-    /* Number text (1/3 etc) */
-    .numbertext {
-      color: #f2f2f2;
-      font-size: 12px;
-      padding: 8px 12px;
-      position: absolute;
-      top: 0;
-    }
-    
-    /* The dots/bullets/indicators */
-    .dot {
-      cursor: pointer;
-      height: 15px;
-      width: 15px;
-      margin: 0 2px;
-      background-color: #bbb;
-      border-radius: 50%;
-      display: inline-block;
-      transition: background-color 0.6s ease;
-    }
-    
-    .active, .dot:hover {
-      background-color: #717171;
-    }
-    
-    /* Fading animation */
-    .fade {
-      -webkit-animation-name: fade;
-      -webkit-animation-duration: 1.5s;
-      animation-name: fade;
-      animation-duration: 1.5s;
-    }
-    
-    
-    .page-footer .footer-copyright{
-        background-color: burlywood;
-    }
-    
-    .page-footer .footer-copyright a{
-        margin-left: 15px;
-    }
-    #termConditions{
-        text-align: center  ;
-    }
-    
-    a.brand-logo{
-    font-family: 'Permanent Marker', cursive;
-    }
+body {
+     padding-bottom: 100px;
+}
+label {
+     font-family: "Permanent Marker", cursive;
+}
+nav {
+     background-color: burlywood;
+     margin-bottom: 30px;
+     font-family: "Permanent Marker", cursive;
+}
+nav ul a {
+     font-weight: bold;
+}
+nav i.material-icons {
+     font-size: 50px;
+     padding-left: 10px;
+}
+.image-galary {
+     height: 300px;
+}
+.bannerText {
+     font-size: 60px;
+     color: #000;
+     position: relative;
+     margin-right: 30px;
+     font-family: "Permanent Marker", cursive;
+}
+.category .input-field {
+     padding-bottom: 50px;
+     display: inline-block;
+     width: 20%;
+}
+
+.category label {
+     font-size: 16px;
+     font-weight: bold;
+     margin-right: 10px;
+     color: #000;
+     margin-right: 32px;
+}
+.tile-image {
+     margin-bottom: 70px;
+}
+.tile-image img {
+     width: 200px;
+     height: 200px;
+}
+
+.pet-detail label {
+     margin-bottom: 20px;
+     display: inline-block;
+}
+.page-footer {
+     font-family: "Permanent Marker", cursive;
+     padding: 0px 10px;
+     color: #fff;
+     background-color: burlywood;
+     font-family: "permanent Marker", cursive;
+     position: fixed;
+     z-index: 10;
+     width: 100%;
+     bottom: 0;
+}
+* {
+     box-sizing: border-box;
+}
+
+/* Slideshow container */
+.slideshow-container {
+     position: relative;
+     margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+     display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+     cursor: pointer;
+     position: absolute;
+     top: 50%;
+     width: auto;
+     margin-top: -22px;
+     padding: 16px;
+     color: white;
+     font-weight: bold;
+     font-size: 18px;
+     transition: 0.6s ease;
+     border-radius: 0 3px 3px 0;
+     user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+     right: 0;
+     border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+     background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+     color: #f2f2f2;
+     font-size: 15px;
+     padding: 8px 12px;
+     position: absolute;
+     bottom: 8px;
+     width: 100%;
+     text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+     color: #f2f2f2;
+     font-size: 12px;
+     padding: 8px 12px;
+     position: absolute;
+     top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+     cursor: pointer;
+     height: 15px;
+     width: 15px;
+     margin: 0 2px;
+     background-color: #bbb;
+     border-radius: 50%;
+     display: inline-block;
+     transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+     background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+     -webkit-animation-name: fade;
+     -webkit-animation-duration: 1.5s;
+     animation-name: fade;
+     animation-duration: 1.5s;
+}
+
+.page-footer .footer-copyright {
+     background-color: burlywood;
+}
+
+.page-footer .footer-copyright a {
+     margin-left: 15px;
+}
+#termConditions {
+     text-align: center;
+}
+
+a.brand-logo {
+     font-family: "Permanent Marker", cursive;
+}
 .category label {
      font-size: 16px;
      font-weight: bold;
@@ -275,5 +283,5 @@ nav{
      text-align: center;
 }
 .group {
-    margin: 0 20px 50px 20px;
+     margin: 0 20px 50px 20px;
 }

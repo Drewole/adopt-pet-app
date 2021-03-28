@@ -97,8 +97,7 @@ btn.on('click', function () {
 			},
 			success: function (data) {
 				console.log(data)
-				return data
-				// getting data, do like normal
+				
 
 
 			},
