@@ -54,6 +54,20 @@ nav i.material-icons {
 .image-galary {
      height: 300px;
 }
+.selection-image {
+     cursor: pointer;
+}
+.selection-image img {
+     border-radius: 8px;
+     transition: all 0.2s ease-in-out;
+}
+.selection-image img:hover {
+     transform: scale(1.1);
+}
+.banner .right {
+     background-color: rgba(255, 255, 255, 0.4);
+     padding: 20px;
+}
 .bannerText {
      font-size: 60px;
      color: #000;

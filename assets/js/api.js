@@ -26,6 +26,7 @@ externalDocs:
   description: Petfinder API Documentation
   url: 'https://www.petfinder.com/developers/v2/docs/'
 */
+var selectedFavs = [];
 
 var form = new FormData();
 
@@ -96,15 +97,35 @@ btn.on('click', function () {
 				'Authorization': `Bearer ${token}`,
 			},
 			success: function (data) {
-
-				function displayImagesToSelect() {
-					
-				}
-
 				let petSelection = data;
-				console.log(petSelection.animals[0])
+				let petOne = petSelection.animals[0].photos[0];
+				let petTwo = petSelection.animals[1].photos[0];
 
-
+				if (petSelection.animals[0].photos[0].medium === "") {
+					petOne = "https://via.placeholder.com/300";
+				}
+				if (petSelection.animals[1].photos[0].medium === "") {
+					petTwo = "https://via.placeholder.com/300";
+				}
+				
+				
+				// TODO: I am having problems when there isn't a medium image and it returns undefined. The logic above this comment is trying to figure that out.
+				console.log(petSelection)
+				let choicesTemplate = 
+					`	<div class="selection-image first-image col s6 m6 center-align">
+								<h4>${petSelection.animals[0].name}</h4>
+								<img id="${petSelection.animals[0].id}" src="${petOne}" width="300" height="300" />
+							</div>
+							<div class="selection-image second-image col s6 m6 center-align">
+								<h4>${petSelection.animals[1].name}</h4>
+								<img id="${petSelection.animals[1].id}" src="${petTwo}" width="300" height="300" />
+							</div>
+						 `
+				$(".images-wrapper").append(choicesTemplate).removeClass("hidden");
+				$(".selection-image").on("click", function(e){
+					console.log($(this).attr("id"));
+					//TODO: need to then get the data of the clicked item by using the ID, and display that in the box that is below it in the HTML. Fields are there, just need to replace necessary text.
+				});
 
 
 			},
