@@ -53,7 +53,18 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 });
 
+function retrieveFromLocalStorage(storageName, arr) {
+	if (localStorage.getItem(storageName !== null)) {
+		arr = JSON.parse(localStorage.getItem(storageName));
+		return arr;
+	}
+}
+retrieveFromLocalStorage("favorites",selectedFavs);
 
+
+function saveToLocalStorage(storageName,val) {
+	localStorage.setItem(storageName, JSON.stringify(val));
+}
 
 
 let group = $('.group')
@@ -126,6 +137,7 @@ btn.on('click', function () {
 
 				$(".selection-image").on("click", function(	){
 					var petId = $(this).attr("id"); //123
+					$('.pet-detail .btn-small').removeClass('favorite');
 					$('.pet-detail').removeClass('hidden')
 					$('.find-friend-view').addClass('hidden')
 					var selectedAnimal = animals.find(function(animal){
@@ -141,10 +153,33 @@ btn.on('click', function () {
 					$('#goodWithChild').html(selectedAnimal.environment.children=== true ? 'Yes' : 'No')
 					$('#color').html(selectedAnimal.colors.primary)
 					$('#description').html(selectedAnimal.description)
+
+					
+					$('.pet-detail .btn-small.add-fav').on("click" , function(e) {
+						$(this).addClass("favorite");
+						let thisFav = selectedFavs;
+						thisFav.push(
+							{
+								id: selectedAnimal.id,
+								type: selectedAnimal.type,
+								name: selectedAnimal.name,
+								detailImageSrc: selectedAnimalImage,
+								gender: selectedAnimal.gender,
+								age: selectedAnimal.age,
+								breed: selectedAnimal.breeds.primary,
+								goodWithChildren: selectedAnimal.environment.children,
+								color: selectedAnimal.colors.primary,
+								description: selectedAnimal.description,
+								url: selectedAnimal.url
+							}
+						);
+						console.log(thisFav)
+						saveToLocalStorage("favorites",thisFav);
+					});
 					
 				});
 
-
+				console.log(data)
 			},
 			error: function (error) {
 				console.log(error)
