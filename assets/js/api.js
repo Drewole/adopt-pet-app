@@ -119,7 +119,7 @@ btn.on('click', function () {
 					$(".images-wrapper").append(
 					`	<div class="selection-image first-image col s12 m6 l4 center-align" id="${animal.id}" >
 								<h4>${animal.name}</h4>
-								<img src="${animal.photos.length ? animal.photos[0].medium : 'https://via.placeholder.com/300'}" width="300" height="300" />
+								<img src="${animal.photos.length ? animal.photos[0].medium : 'assets/images/doge.png'}" width="300" height="300" />
 							</div>
 						 `).removeClass('hidden')
 				});
@@ -132,7 +132,7 @@ btn.on('click', function () {
 						return animal.id==petId
 					})
 					console.log(selectedAnimal)
-					var selectedAnimalImage = selectedAnimal.photos.length ? selectedAnimal.photos[0].medium : 'https://via.placeholder.com/300'
+					var selectedAnimalImage = selectedAnimal.photos.length ? selectedAnimal.photos[0].medium : 'assets/images/doge.png'
 					$("#petDetailImage").html("<img src="+selectedAnimalImage+" width='300' height='300' />")
 					$('#petName').html(selectedAnimal.name+' The '+selectedAnimal.species)
 					$('#gender').html(selectedAnimal.gender)
