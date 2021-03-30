@@ -95,31 +95,31 @@ function favoritesView() {
 		$('#color').html(selectedFavAnimal.colors.primary)
 		$('#description').html(selectedFavAnimal.description)
 	});
+
 };
 
-// function addFavClick(selectedId, selectedAnimal){
-	$('.pet-detail .btn-small.add-fav').on("click" , function() {
+// $('.pet-detail .btn-small.add-fav').on("click" , function() {
+// 	console.log('coming')
+// 	var thisFav = favoriteAnimals ? favoriteAnimals : [];
+// 	var AnimalFavorite = thisFav.find(function(animal){
+// 		return animal.id==favPetId
+// 	})
 
-		var thisFav = favoriteAnimals ? favoriteAnimals : [];
-		var AnimalFavorite = thisFav.find(function(animal){
-			return animal.id==favPetId
-		})
+// 	var isAnimalFavorite = AnimalFavorite && Object.keys(AnimalFavorite).length > 0 ? true : false
 
-		var isAnimalFavorite = AnimalFavorite && Object.keys(AnimalFavorite).length > 0 ? true : false
+// 	if(isAnimalFavorite){
+// 		$(this).removeClass("favorite");
+// 		thisFav = thisFav.filter(function(animal){ 
+// 			return animal.id !== AnimalFavorite.id
+// 		})
+// 		localStorage.setItem("favorites", JSON.stringify(thisFav));
+// 	} else {
+// 		$(this).addClass("favorite");
+// 		thisFav.push(selectedAnimal);
+// 		localStorage.setItem("favorites", JSON.stringify(thisFav));
+// 	}
+// });
 
-		if(isAnimalFavorite){
-			$(this).removeClass("favorite");
-			thisFav = thisFav.filter(function(animal){ 
-				return animal.id !== AnimalFavorite.id
-			})
-			localStorage.setItem("favorites", JSON.stringify(thisFav));
-		} else {
-			$(this).addClass("favorite");
-			thisFav.push(selectedAnimal);
-			localStorage.setItem("favorites", JSON.stringify(thisFav));
-		}
-	});
-// }
 
 $('#backToHome').on('click', function(){
 	viewToggle("visible", "hidden", "hidden");

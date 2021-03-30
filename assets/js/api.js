@@ -147,7 +147,9 @@ btn.on('click', function () {
 });
 
 	
+	
 $('.pet-detail .btn-small.add-fav').on("click" , function() {
+	console.log('coming from api.js')
 	selectedFavs = JSON.parse(localStorage.getItem('favorites'));
 	var thisFav = selectedFavs ? selectedFavs : [];
 
@@ -159,17 +161,20 @@ $('.pet-detail .btn-small.add-fav').on("click" , function() {
 	var isAnimalFavorite = AnimalFavorite && Object.keys(AnimalFavorite).length > 0 ? true : false //[id,gender]
 
 	if(isAnimalFavorite){
+		console.log('yes in local')
 		$(this).removeClass("favorite");
 		thisFav = thisFav.filter(function(animal){ // returns remaining animals in the favorite
 			return animal.id !== AnimalFavorite.id
 		})
 		localStorage.setItem("favorites", JSON.stringify(thisFav));
 	} else {
+		console.log('not in local')
 		$(this).addClass("favorite");
 		thisFav.push(selectedAnimal);
 		localStorage.setItem("favorites", JSON.stringify(thisFav));
 	}
 });
+
 
 //Lets get the coords of the city the user searches
 $('#locationBtn').text("Get My Location")
