@@ -55,7 +55,18 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 });
 
+function retrieveFromLocalStorage(storageName, arr) {
+	if (localStorage.getItem(storageName !== null)) {
+		arr = JSON.parse(localStorage.getItem(storageName));
+		return arr;
+	}
+}
+retrieveFromLocalStorage("favorites",selectedFavs);
 
+
+function saveToLocalStorage(storageName,val) {
+	localStorage.setItem(storageName, JSON.stringify(val));
+}
 
 
 let group = $('.group')
@@ -120,10 +131,9 @@ btn.on('click', function () {
 					$('#goodWithChild').html(selectedAnimal.environment.children=== true ? 'Yes' : 'No')
 					$('#color').html(selectedAnimal.colors.primary)
 					$('#description').html(selectedAnimal.description)
-					
 				});
 
-
+				console.log(data)
 			},
 			error: function (error) {
 				console.log(error)
