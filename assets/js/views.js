@@ -97,7 +97,7 @@ function favoritesView() {
 	});
 
 };
-
+// added the same code in api.js
 // $('.pet-detail .btn-small.add-fav').on("click" , function() {
 // 	console.log('coming')
 // 	var thisFav = favoriteAnimals ? favoriteAnimals : [];
