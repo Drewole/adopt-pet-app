@@ -26,11 +26,13 @@ externalDocs:
   description: Petfinder API Documentation
   url: 'https://www.petfinder.com/developers/v2/docs/'
 */
-var selectedFavs = [];
+var selectedFavs
 
 var form = new FormData();
 
 var token = "";
+var petId
+var selectedAnimal
 
 form.append('grant_type', 'client_credentials');
 form.append('client_id', 'uX6OHJkjYlNy9eLD9RKw6iJ5LB08IAWqgeGrkz7KMq56QX3QOU');
@@ -80,28 +82,7 @@ btn.on('click', function () {
 			url = 'https://api.petfinder.com/v2/animals?'
 		}
 
-		// $('select option').each(function () {
-		// 	if ($(this).is(':selected')) {
-		// 		if (url = 'https://api.petfinder.com/v2/animals?') {
-		// 			url = url + $(this).val().substring(1)
-		// 		} else {
-		// 			url = url + $(this).val()
-		// 		}
-		// 	}
-		// 	// console.log(url)
-		// })
-
-		// $('.checkbox').each(function () {
-		// 	if ($(this).is(':checked')) {
-		// 		if (url = 'https://api.petfinder.com/v2/animals?') {
-		// 			url = url + $(this).val().substring(1)
-		// 		} else {
-		// 			url = url + $(this).val()
-		// 		}
-		// 	}
-		// 	// console.log(url)
-		// })
-
+		
 		//after getting token, we make the call request
 		$.ajax({
 			url: url,
@@ -111,28 +92,26 @@ btn.on('click', function () {
 			},
 			success: function (data) {
 				var animals = data.animals;
-				
-
-				// TODO: I am having problems when there isn't a medium image and it returns undefined. The logic above this comment is trying to figure that out.
+				$('.images-wrapper').html('')
 				// console.log(petSelection)
 				animals.forEach(animal => {
 					$(".images-wrapper").append(
 					`	<div class="selection-image first-image col s12 m6 l4 center-align" id="${animal.id}" >
 								<h4>${animal.name}</h4>
-								<img src="${animal.photos.length ? animal.photos[0].medium : 'https://via.placeholder.com/300'}" width="300" height="300" />
+								<img src="${animal.photos.length ? animal.photos[0].medium : 'assets/images/doge.png'}" width="300" height="300" />
 							</div>
 						 `).removeClass('hidden')
 				});
 
 				$(".selection-image").on("click", function(	){
-					var petId = $(this).attr("id"); //123
+					petId = $(this).attr("id"); //123
+					$('.pet-detail .btn-small').removeClass('favorite');
 					$('.pet-detail').removeClass('hidden')
 					$('.find-friend-view').addClass('hidden')
-					var selectedAnimal = animals.find(function(animal){
+					selectedAnimal = animals.find(function(animal){
 						return animal.id==petId
 					})
-					console.log(selectedAnimal)
-					var selectedAnimalImage = selectedAnimal.photos.length ? selectedAnimal.photos[0].medium : 'https://via.placeholder.com/300'
+					var selectedAnimalImage = selectedAnimal.photos.length ? selectedAnimal.photos[0].medium : 'assets/images/doge.png'
 					$("#petDetailImage").html("<img src="+selectedAnimalImage+" width='300' height='300' />")
 					$('#petName').html(selectedAnimal.name+' The '+selectedAnimal.species)
 					$('#gender').html(selectedAnimal.gender)
@@ -157,6 +136,30 @@ btn.on('click', function () {
 
 });
 
+	
+$('.pet-detail .btn-small.add-fav').on("click" , function() {
+	selectedFavs = JSON.parse(localStorage.getItem('favorites'));
+	var thisFav = selectedFavs ? selectedFavs : [];
+
+	var AnimalFavorite = thisFav.find(function(animal){  //{}
+	console.log('animal', animal)
+		return animal.id==petId
+	})
+
+	var isAnimalFavorite = AnimalFavorite && Object.keys(AnimalFavorite).length > 0 ? true : false //[id,gender]
+
+	if(isAnimalFavorite){
+		$(this).removeClass("favorite");
+		thisFav = thisFav.filter(function(animal){ // returns remaining animals in the favorite
+			return animal.id !== AnimalFavorite.id
+		})
+		localStorage.setItem("favorites", JSON.stringify(thisFav));
+	} else {
+		$(this).addClass("favorite");
+		thisFav.push(selectedAnimal);
+		localStorage.setItem("favorites", JSON.stringify(thisFav));
+	}
+});
 
 //Lets get the coords of the city the user searches
 $('#locationBtn').text("Get My Location")
@@ -174,28 +177,3 @@ function showPosition(position) {
 	$('#map').text(`Latitude:${position.coords.latitude} Longitude:${position.coords.longitude}`);
 }
 
-
-
-
-
-
-
-
-// in this way, they need to provide their city or location to get lat lon
-// we can simply run the searching by their city, don't need to find lat lon 
-
-/* let cityGeocodeUrl = `https://api.positionstack.com/v1/forward?access_key=cbfda538c5445110ea0ae5fb6a27ebb4&query=${yourCity}&limit=1`
-fetch(cityGeocodeUrl)
-  .then(function (response) {
-	return response.json();
-  })
-  .then(function (data) {
-	let lat = data.data[0].latitude;
-	let lon = data.data[0].longitude;
-	console.log(lat, lon)
-	var mapAPIkey =''
-	var img_url = `https://maps.googleapis.com/maps/api/staticmap?center=${lat},${lon}&zoom=14&size=400x300&sensor=false&key=${mapAPIkey}`
-  $("#mapholder").innerHTML = `<img src='${img_url}'>`;
-  },
-);
- */

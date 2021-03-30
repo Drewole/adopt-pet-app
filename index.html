@@ -5,12 +5,11 @@
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <title>Friend Finder - Helping you find your new pet.</title>
-          <!-- <link rel="stylesheet" href="assets/css/reset.css" /> -->
           <link rel="preconnect" href="https://fonts.gstatic.com" />
 
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
           <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-          <!-- Are we using this font family below? -->
+         
           <!-- <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet" /> -->
           <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
 
@@ -50,6 +49,7 @@
                     </div>
                </nav>
           </header>
+
           <div class="welcome-view visible">
                <div class="wrapper" id="contentWrapper">
                     <div class="banner">
@@ -86,45 +86,11 @@
           <!-- ￼End of the welcome view div -->
 
           <div class="row find-friend-view hidden">
-               <!-- <div class="category center-align">
-                    <label class="">Zipcode</label>
-                    <div class="input-field">
-                         <input type="text" name="zipcode" id="zipcode" />
-                    </div>
-               </div> -->
-
-               <!-- <div class="category center-align">
-                    <label class="">Radius</label>
-                    <div class="input-field">
-                         <select>
-                              <option value="" disabled selected>Choose your radius</option>
-                              <option value=""> 5 Miles</option>
-                              <option value="">10 Miles</option>
-                              <option value="">15 Miles</option>
-                              <option value="">20 Miles</option>
-                         </select>
-                    </div>
-               </div> -->
-                    <!-- <div class="container s12 m6 center-align">
-                         <h3>First, lets start with your location</h3>
-                         <label for="address" class="address">Address</label>
-                         <div class="input-field">
-                              <input type="text" name="address" id="address" />
-                         </div>
-                         <p>OR, get it automatically.</p>
-                         <button class="btn btn-medium" id='locationBtn'>Get My Location</button>
-                    </div>
-                    <div class="container">
-                         <h3>Lets select some criteria</h3>
-                    </div> -->
                     
-                    <fieldset class="group category">
+               <fieldset class="group category">
                          <!-- <legend>Options</legend> -->
-                         
-                         <!-- // can be : Id, type, breed, size, gender, location, distance, before, after, sort, page, limit <br>
-                         // age, color, coat, status, name, organization, good_with_children, state, country <br>
-                         // good_with_dogs, good_with_cats, house_trained, declawed, special_needs	 -->
-                         <form>
+                        
+                    <form>
                          <ul class="find-pet row" style='list-style-type:none'>
                               <li class="col s12 m4 l4 ">
                                    <label>Choose a pet:</label>
@@ -142,76 +108,15 @@
                                    <p>OR, get it automatically.</p>
                                    <button class="btn btn-medium" id='locationBtn'>Get My Location</button>
                               </li>
-
-                              <!-- <li class="col s12 m4 l4">
-                                   <label for="distance">Search Radius</label>
-                                   <select name="distance" id="distance">
-                                   <option value="">Any</option>
-                                   <option value="&distance=10">10 miles</option>
-                                   <option value="&distance=50">50 miles</option>
-                                   <option value="&distance=75">75 miles</option>
-                                   <option value="&distance=100">100 miles</option>
-                                   </select>
-                              </li>
-                              <li class="col s12 m4 l4">
-                                   <label for="gender">Gender</label>
-                                   <select name="gender" id="gender">
-                                   <option value="">Any</option>
-                                   <option value="&gender=male">Gut Boi</option>
-                                   <option value="&gender=female">Gut Girl</option>
-                                   </select>
-                              </li>
-                              <li class="col s12 m4 l4">
-                                   <label for="size">Pet Size</label>
-                                   <select name="size" id="size">
-                                   <option value="">Any</option>
-                                   <option value="&size=small">Little Rat (0-25 lbs)</option>
-                                   <option value="&size=medium">Big Monkey (26-60 lbs)</option>
-                                   <option value="&size=large">Small Horse (61-100 lbs)</option>
-                                   <option value="&size=xlarge">Baby Kong (101 lbs or more)</option>
-                                   </select>
-                              </li>
-                              <li class="col s12 m4">
-                                   <label for="children">
-                                        <input name="children" type="checkbox"  class='checkbox' id="cb1" value="&good_with_children=true" />
-                                        <span>Good with children</span>
-                                   </label>
-                              </li>
-                              <li class="col s12 m4">
-                                   <label for="special">
-                                        <input name="special" type="checkbox" class='checkbox' id="cb3" value="&special_needs=true" />
-                                        <span>Special needs</span>
-                                   </label>
-                              </li>
-                              <li class="col s12 m4">
-                                   <label for="house-trained">
-                                        <input name="house-trained" type="checkbox" class='checkbox' id="cb2" value="&house_trained=true" />
-                                        <span>House trained</span>
-                                   </label>
-                              </li> -->
+                              
                          </ul>
                     </form>
-                    </fieldset>
+               </fieldset>
                     <div class="hidden images-wrapper container">
                     </div>
 
-                    <!-- <div class="hidden category pet-detail container col s12 l7 m7">
-                         <div class="col s6 m6 center-align">
-                              <img src="https://via.placeholder.com/300.jpg" width="300" height="300" />
-                         </div>
-                         <label>
-                              <h3>Bobby the Cat</h3>
-                         </label>
-                         <ul>
-                              <li><span class="bold">Age:</span> 10</li>
-                              <li><span class="bold">House Trained:</span> Yes</li>
-                              <li><span class="bold">Good With Children:</span> No</li>
-                              <li><span class="bold">Special Needs:</span> No</li>
-
-                         </ul>
-                         <button class=" waves-effect waves-light btn-large btn">Add to Favs <i class="fas fa-heart"></i> </button>
-                    </div> -->
-               </div>
+                    
+          </div>
           </div>
           <!-- End of the find friends view div -->
           <div class="row pet-detail container hidden">
@@ -229,6 +134,8 @@
                          <li><span class="bold">Color:</span> <span id="color"></span></li>
                          <li><span class="bold">Description:</span> <span id="description"></span></li>
                     </ul>
+                    <a class="find-friend-link waves-effect waves-light btn-small"><i class="material-icons left">arrow_back</i>Back to Search</a>
+                    <a class="add-fav waves-effect waves-light btn-small"><i class="material-icons left">favorite</i>Add to Favorites</a>
                </div>
                <div class="row col l12 center-align" id="confirmMessage"> 
                     <h4>Thanks for submitting the application. Will get back to you..!!!</h4>
@@ -276,27 +183,8 @@
           </div>
 
           <div class="row favorites-view hidden">
-               <div class="wrapper" id="contentWrapper">
-                    <div class="row tile-image">
-                    <div class="col s12 center-align">
-                         
-                    </div>
+               <div class="fav-images-wrapper container">
                </div>
-               <div class="container favorites-list row s12 m9 14">
-                    <ul class="collection">
-                              <li class="collection-item">Alvin <i class="small material-icons">child_friendly</i><i class="small material-icons">insert_picture</i><a href=""><i class="small material-icons">insert_link</i></a></li>
-                              <li class="collection-item">Alvin</li>
-                              <li class="collection-item">Alvin</li>
-
-                         </ul>
-               </div>
-               
-                    
-          
-          
-                    <!-- User information -->
-                    
-          </div>
           </div>
           <!-- End of the favorites view div -->
 
