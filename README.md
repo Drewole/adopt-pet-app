@@ -1,11 +1,26 @@
-# Find a Friend - Pet adoption app
+# Friend-Finder - Pet adoption app
 
-[Github Pages](https://drewole.github.io/adopt-pet-app/)
+An app to help find pets near you to adopt.
 
-![A user clicks on slots on the color-coded calendar and edits the events.](.assets/screenshot.png)
+# Description
+Friend-Finder is a fun useful app to help you on your journey to adopt a new pet to join your family. You will press the browse pets option button. Which will then lead you to a new page where you will indicate the specific animal you want and the region you prefer for it to be in. Once you choose a pet then you will put in your information or even save it to your favorites for a later check out.
 
-Just a really quck introduction on what this project is about.
+# Technologies Used 
 
-## Purpose - To provide a leisurely way to browse adoptable pets
+* HTML
+* Materialize CSS
+* Font Awesome
+* Google Fonts
+* Java script
+* JQuery
 
-You'll need to use the [Moment.js](https://momentjs.com/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Moment.js in the browser.
+# References
+
+* https://positionstack.com
+* Https://petfinder.com 
+
+# Resources Links
+
+* [Github Pages](https://drewole.github.io/adopt-pet-app/)
+* https://drewole.github.io/adopt-pet-app/
+
